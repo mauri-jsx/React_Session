@@ -1,4 +1,3 @@
-// src/pages/Login.js
 import { useState } from "react";
 import { useSession } from "../hook/useSession";
 
@@ -11,9 +10,9 @@ const Login = () => {
   const handleLogin = async () => {
     const errorMessage = await login({ name, password });
     if (errorMessage) {
-      setError(errorMessage); // Muestra el mensaje de error
+      setError(errorMessage);
     } else {
-      setError(""); // Limpia el error si el login fue exitoso
+      setError("");
     }
   };
 

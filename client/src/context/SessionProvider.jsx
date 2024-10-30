@@ -1,4 +1,3 @@
-// src/context/SessionProvider.js
 import { createContext, useState } from "react";
 
 export const SessionContext = createContext();
@@ -18,19 +17,19 @@ export const SessionProvider = ({ children }) => {
       if (response.ok) {
         const data = await response.json();
         setUser(data.user);
-        return null; // Autenticación exitosa, sin error
+        return null;
       } else {
         throw new Error("Nombre o contraseña incorrectos");
       }
     } catch (error) {
-      return error.message; // Retorna el mensaje de error
+      return error.message;
     } finally {
       setLoading(false);
     }
   };
 
   const logout = () => {
-    setUser(null); // Limpiar el estado de usuario
+    setUser(null);
   };
 
   return (

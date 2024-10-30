@@ -1,4 +1,3 @@
-// src/pages/Home.js
 import { useSession } from "../hook/useSession";
 
 const Home = () => {
